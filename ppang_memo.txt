@@ -1,0 +1,11 @@
+깃 푸쉬 할때
+git add .
+Git commit -m “memo”
+Git push origin master
+
+
+모델 생성하고 마이그레이션 할때
+python manage.py makemigrations
+확인하고 
+python manage.py migrate
+

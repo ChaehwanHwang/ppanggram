@@ -1,4 +1,4 @@
 {
-    "python.pythonPath": "/usr/local/bin/python",
+    "python.pythonPath": "/Users/chaehwanhwang/.local/share/virtualenvs/ppanggram-byUg-7jY/bin/python",
     "python.linting.pylintEnabled": true
 }
