@@ -3,7 +3,7 @@ git add .
 Git commit -m “memo”
 Git push origin master
 
-
+2018.12.19
 모델 생성하고 마이그레이션 할때
 python manage.py makemigrations
 확인하고 
