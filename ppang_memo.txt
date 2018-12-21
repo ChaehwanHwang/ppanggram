@@ -8,5 +8,3 @@ git push origin master
 python manage.py makemigrations
 확인하고 
 python manage.py migrate
-
-1
