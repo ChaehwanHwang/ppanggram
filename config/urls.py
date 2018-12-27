@@ -19,6 +19,10 @@ urlpatterns = [
         "users/",
         include("ppanggram.users.urls", namespace="users"),
     ),
+    path(
+        "images/",
+        include("ppanggram.images.urls", namespace="images"),
+    ),
     path("accounts/", include("allauth.urls")),
     # Your stuff: custom urls includes go here
 ] + static(
