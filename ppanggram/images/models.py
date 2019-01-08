@@ -23,10 +23,16 @@ class Image(TimeStampedModel):
     file = models.ImageField()
     location = models.CharField(max_length=140)
     caption = models.TextField()
-    creator = models.ForeignKey(user_models.User, null=True, on_delete=models.CASCADE)
+    creator = models.ForeignKey(user_models.User, null=True, on_delete=models.CASCADE, related_name='images')
 
 # 각 값들이 어떤 데이터를 저장하는지 알려주고
 # 이미 존재하고 있지 않은 값들이 때문에 null=True는 필요하지 않음
+
+    @property
+    def like_count(self):
+        return self.likes.all().count()
+        
+
 
     def __str__(self):
         return '{} - {}'.format(self.location, self.caption)

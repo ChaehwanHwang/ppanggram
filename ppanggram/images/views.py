@@ -14,13 +14,27 @@ class Feed(APIView):
 
         following_users = user.following.all()
 
-        for following_users in following_users:
+        image_list = []
 
-            print(following_users.images.all()[:2])
+        for following_user in following_users:
 
-        return Response(data=serializer.data) 
+            user_images = following_user.images.all()[:2]
 
+            for image in user_images:
+    
+                image_list.append(image)
 
+        # sorted_list = sorted(image_list, key=get_key, reverse=True)        
+
+        sorted_list = sorted(
+            image_list, key=lambda image: image.created_at, reverse=True)
+
+        serializer = serializers.ImageSerializer(sorted_list, many=True)
+
+        return Response(serializer.data)
+
+# def get_key(image):
+#     return image.created_at
 
 
 # 이건 테스트 임
