@@ -9,6 +9,20 @@ urlpatterns = [
         name='feed'
     ),
 
+    url(
+        regex=r'(?P<image_id>\w+)/like/',
+        view=views.LikeImage.as_view(),
+        name='like_Image'
+    ),
+
+]
+
+
+
+
+
+
+
 
     # 테스트
 
@@ -22,4 +36,4 @@ urlpatterns = [
     #     view=views.ListAllLikes.as_view(),
     #     name='all_images'
     # )
-]
+
