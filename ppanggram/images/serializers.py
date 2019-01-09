@@ -16,7 +16,7 @@ class CommentSerializer(serializers.ModelSerializer):
 
     # image = ImageSerializer()
 
-    creator = FeedUserSerializer()
+    creator = FeedUserSerializer(read_only=True)
 
     class Meta:
         model = models.Comment
