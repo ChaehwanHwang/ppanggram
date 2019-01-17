@@ -3,6 +3,8 @@ from ppanggram.users import models as user_models
 # 장고가 어느 모델을 가져와야할지 모르기 때문에 as를 사용함
 from django.utils.encoding import python_2_unicode_compatible # 파이썬2와 호환
 # Create your models here.
+from taggit.managers import TaggableManager
+
 
 @python_2_unicode_compatible
 class TimeStampedModel(models.Model):
@@ -24,7 +26,7 @@ class Image(TimeStampedModel):
     location = models.CharField(max_length=140)
     caption = models.TextField()
     creator = models.ForeignKey(user_models.User, null=True, on_delete=models.CASCADE, related_name='images')
-
+    tag = TaggableManager()
 # 각 값들이 어떤 데이터를 저장하는지 알려주고
 # 이미 존재하고 있지 않은 값들이 때문에 null=True는 필요하지 않음
 

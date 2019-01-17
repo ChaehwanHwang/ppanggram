@@ -131,6 +131,15 @@ class Comment(APIView):
             return Response(status=status.HTTP_404_NOT_FOUND)
 
 
+class Search(APIView):
+    
+    def get(self, request, format=None):
+
+        hastags = request.query_params.get('hastags', None)
+
+        hastags = hastags.split(",")
+
+        images = models.Image.objects.filter(tags__name__in=hastags)
 
 
 
