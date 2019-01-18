@@ -5,7 +5,7 @@ from ppanggram.images import serializers as images_serializers
 
 class UserProfileSerializer(serializers.ModelSerializer):
 
-    images = images_serializers.UserProfileImagesSerializer(many=True)
+    images = images_serializers.CountImagesSerializer(many=True)
 
     class Meta:
         model = models.User

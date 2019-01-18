@@ -3,7 +3,7 @@ from . import models
 from ppanggram.users import models as user_models
 
 
-class UserProfileImagesSerializer(serializers.ModelSerializer):
+class CountImagesSerializer(serializers.ModelSerializer):
 
     class Meta:
             model = models.Image
