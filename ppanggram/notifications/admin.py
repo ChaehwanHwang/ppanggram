@@ -10,3 +10,4 @@ class NotificationAdmin(admin.ModelAdmin):
         'to',
         'notification_type'
     )
+    
