@@ -73,7 +73,8 @@ THIRD_PARTY_APPS = [
 LOCAL_APPS = [
     'ppanggram.users.apps.UsersAppConfig',
     # Your stuff: custom apps go here
-    'ppanggram.images.apps.ImagesConfig'
+    'ppanggram.images.apps.ImagesConfig',
+    'ppanggram.notifications.apps.NotificationsConfig' #notifications app
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
