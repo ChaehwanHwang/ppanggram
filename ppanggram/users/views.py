@@ -6,6 +6,8 @@ from rest_framework import status
 from . import models # 모델에서 이미지 오브젝트 가져오기
 from . import serializers
 
+from ppanggram.notifications import views as notification_views
+
 class ExploreUsers(APIView):
 
     def get(self, request, format=None):
@@ -31,6 +33,9 @@ class FollowUser(APIView):
         user.following.add(user_to_follow)
 
         user.save()
+
+        #notification
+        notification_views.create_notification(user, user_to_follow, 'follow')
 
         return Response(status=status.HTTP_200_OK)
 
