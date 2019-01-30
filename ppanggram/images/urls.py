@@ -28,6 +28,12 @@ urlpatterns = [
     ),
 
     url(
+        regex=r'^(?P<image_id>\w+)/comments/(?P<comment_id>[0-9]+)/$',
+        view=views.ModerateComments.as_view(),
+        name='comment_Image'
+    ),
+
+    url(
         regex=r'^comments/(?P<comment_id>[0-9]+)/$',
         view=views.Comment.as_view(),
         name='comment'
