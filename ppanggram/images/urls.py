@@ -10,25 +10,31 @@ urlpatterns = [
     ),
 
     url(
-        regex=r'^(?P<image_id>\w+)/like/$',
+        regex=r'^(?P<image_id>[0-9]+)/$',
+        view=views.ImageDetail.as_view(),
+        name='feed'
+    ),
+
+    url(
+        regex=r'^(?P<image_id>[0-9]+)/likes/$',
         view=views.LikeImage.as_view(),
         name='like_Image'
     ),
 
     url(
-        regex=r'^(?P<image_id>\w+)/unlike/$',
+        regex=r'^(?P<image_id>[0-9]+)/unlikes/$',
         view=views.UnLikeImage.as_view(),
         name='like_Image'
     ),
 
     url(
-        regex=r'^(?P<image_id>\w+)/comments/$',
+        regex=r'^(?P<image_id>[0-9]+)/comments/$',
         view=views.CommentOnImage.as_view(),
         name='comment_Image'
     ),
 
     url(
-        regex=r'^(?P<image_id>\w+)/comments/(?P<comment_id>[0-9]+)/$',
+        regex=r'^(?P<image_id>[0-9]+)/comments/(?P<comment_id>[0-9]+)/$',
         view=views.ModerateComments.as_view(),
         name='comment_Image'
     ),
