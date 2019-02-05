@@ -4,17 +4,23 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.views.generic import TemplateView
 from django.views import defaults as default_views
+from rest_framework_jwt.views import obtain_jwt_token
 
 urlpatterns = [
-    path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
-    path(
-        "about/",
-        TemplateView.as_view(template_name="pages/about.html"),
-        name="about",
-    ),
+    # path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
+    # path(
+    #     "about/",
+    #     TemplateView.as_view(template_name="pages/about.html"),
+    #     name="about",
+    # ),
+
     # Django Admin, use {% url 'admin:index' %}
     path(settings.ADMIN_URL, admin.site.urls),
     # User management
+    path(
+        "api-token-auth/", 
+        obtain_jwt_token
+    ),
     path(
         "users/",
         include("ppanggram.users.urls", namespace="users"),
