@@ -69,6 +69,7 @@ THIRD_PARTY_APPS = [
     'allauth.socialaccount',
     'rest_framework', # 파이썬 오브젝트를 제이슨 오브젝트로 변경 반대도 마찬가지 "씨리얼라이저"
     'taggit', # Tag for the photos
+    'taggit_serializer', #tags serializer
 ]
 LOCAL_APPS = [
     'ppanggram.users.apps.UsersAppConfig',
