@@ -67,6 +67,7 @@ THIRD_PARTY_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'allauth.socialaccount.providers.facebook',
     'rest_framework', # 파이썬 오브젝트를 제이슨 오브젝트로 변경 반대도 마찬가지 "씨리얼라이저"
     'rest_framework.authtoken',
     'taggit', # Tag for the photos
