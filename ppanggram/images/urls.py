@@ -5,7 +5,7 @@ app_name = 'images' #django 2.0이면 추가해야함
 urlpatterns = [
     url(
         regex=r'^$',
-        view=views.Feed.as_view(),
+        view=views.Images.as_view(),
         name='feed'
     ),
 
