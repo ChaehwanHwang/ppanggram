@@ -11,12 +11,6 @@ python manage.py makemigrations
 python manage.py migrate
 
 
-GitHub Token: 
-4101d8192d8a11c35be6997979b5fa2027d5e3ba
+f66bffc1e9d4439a6277382ee806af700b9e0dde
 
-GitHub Gist: 
-5bc4a84cc80b946ddc0ea1d542a54a48
-
-
-57b03278e710ac78fc248a25f345fc9375510d36
 ffc87cbb7a0da4ec1e5752558a48ec0b
