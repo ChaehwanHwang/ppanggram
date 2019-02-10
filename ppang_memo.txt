@@ -10,7 +10,7 @@ python manage.py makemigrations
 확인하고 
 python manage.py migrate
 
-
-f66bffc1e9d4439a6277382ee806af700b9e0dde
-
+397c8687ecd3a54686521d8d3f37a7b9ea818b19
 ffc87cbb7a0da4ec1e5752558a48ec0b
+
+<script src="https://gist.github.com/ChaehwanHwang/ffc87cbb7a0da4ec1e5752558a48ec0b.js"></script>
